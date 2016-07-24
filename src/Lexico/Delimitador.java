@@ -7,8 +7,18 @@ package Lexico;
 
 /**
  *
- * @author Victor
+ * @author Victor Figueiredo
  */
-public class Delimitador {
+public class Delimitador extends Lexema {
+
+    public Delimitador(String tipo) {
+        super(tipo);
+    }
+
+ 
+    @Override
+    public boolean automato(char x) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

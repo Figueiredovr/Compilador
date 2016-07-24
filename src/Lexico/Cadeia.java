@@ -7,8 +7,19 @@ package Lexico;
 
 /**
  *
- * @author Victor
+ * @author Victor Figueiredo
  */
-public class Cadeia {
+public class Cadeia extends Lexema {
+
+    public Cadeia(String tipo) {
+        super(tipo);
+    }
+
+   
+
+    @Override
+    public boolean automato(char x) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

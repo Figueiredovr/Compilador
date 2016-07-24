@@ -7,8 +7,19 @@ package Lexico;
 
 /**
  *
- * @author Victor
+ * @author Victor Figueiredo
  */
-public class PalavraReservada {
+public class PalavraReservada extends Lexema {
+
+    public PalavraReservada(String tipo) {
+        super(tipo);
+    }
+
+  
+
+    @Override
+    public boolean automato(char x) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

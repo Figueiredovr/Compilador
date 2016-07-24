@@ -7,8 +7,17 @@ package Lexico;
 
 /**
  *
- * @author Victor
+ * @author Victor Figueiredo
  */
-public class Numero {
+public class Numero extends Lexema {
+
+    public Numero(String tipo) {
+        super(tipo);
+    } 
+
+    @Override
+    public boolean automato(char x) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
