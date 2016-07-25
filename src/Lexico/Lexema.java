@@ -12,16 +12,20 @@ package Lexico;
 abstract class Lexema {
 
     public String var;              //Recebe o que tem no buffer no final do automato
+    public String erro;
+    public boolean valido;
     private String tipo;            //Identificar qual lexema eh
     private String estadoAtual;     //Em qual estado do automato esta
     private String buffer;          //O buffer com o que foi consumido pelo automato
 
+
     //@param Tipo do lexema Ex: Identificador
-    public Lexema (String tipo){
+    public Lexema (String buffer, String tipo){
         this.tipo = tipo;
+        this.buffer = buffer;
     }
 
-    public String tipo (){
+    public String getTipo (){
         return this.tipo;
     }
 
@@ -33,7 +37,7 @@ abstract class Lexema {
       return false;
     }
 
-    public boolean numero (char x){
+    public boolean numero (){
       String numero = String("1234567890");
       for (int i=0;i<numero.length();i++){
         if(x==numero[i]) return true;
@@ -41,7 +45,25 @@ abstract class Lexema {
       return false;
     }
 
-    public abstract boolean automato(char x);
+    public boolean delimitador (char x){
+      String del = String(",;()\'\" ")
+      for (int i=0;i<del.length();i++){
+        if(x==del[i]) return true;
+      }
+      return false;
+    }
+
+    //Consome o x do byffer e adiciona no vetor var
+    private void consumir (char x){
+      this.var = this.var +x;
+      this.buffer.replace( x, "");
+    }
+
+    private void erro (char x){
+      this
+    }
+
+    public abstract String automato(char x);
 
 
 
