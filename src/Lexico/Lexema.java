@@ -30,40 +30,43 @@ abstract class Lexema {
     }
 
     public boolean letra (char x){
-      String letras = String("abcdefghkijlmnpqorstuvwxyzABCDEFGHKIJLMNPQORSTUVWXYZ");
+      String letras = "abcdefghkijlmnpqorstuvwxyzABCDEFGHKIJLMNPQORSTUVWXYZ";
       for (int i=0;i<letras.length();i++){
-        if(x==letras[i]) return true;
+        if(x == letras.charAt(i)) 
+            return true;
       }
       return false;
     }
 
-    public boolean numero (){
-      String numero = String("1234567890");
+    public boolean numero (char x){
+      String numero = "1234567890";
       for (int i=0;i<numero.length();i++){
-        if(x==numero[i]) return true;
+        if(x == numero.charAt(i)) 
+            return true;
       }
       return false;
     }
 
     public boolean delimitador (char x){
-      String del = String(",;()\'\" ")
+      String del = ",;()\'\" ";
       for (int i=0;i<del.length();i++){
-        if(x==del[i]) return true;
+        if(x == del.charAt(i)) 
+            return true;
       }
       return false;
     }
 
     //Consome o x do byffer e adiciona no vetor var
     private void consumir (char x){
-      this.var = this.var +x;
-      this.buffer.replace( x, "");
+      this.var = this.var + x;
+      this.buffer.replace( x, ' ');
     }
 
     private void erro (char x){
-      this
+      
     }
 
-    public abstract String automato(char x);
+    public abstract String automato(char x); 
 
 
 

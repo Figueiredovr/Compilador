@@ -11,14 +11,12 @@ package Lexico;
  */
 public class Identificador extends Lexema {
 
-    public Identificador(String tipo) {
-        super(tipo);
+    public Identificador(String buffer, String tipo) {
+        super(buffer, tipo);
     }
-
 
     @Override
-    public boolean automato(char x) {
+    public String automato(char x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
 }
