@@ -14,9 +14,9 @@ abstract class Lexema {
     public String var;              //Recebe o que tem no buffer no final do automato
     public String erro;
     public boolean valido;
-    private String tipo;            //Identificar qual lexema eh
-    private String estadoAtual;     //Em qual estado do automato esta
-    private String buffer;          //O buffer com o que foi consumido pelo automato
+    public String tipo;            //Identificar qual lexema eh
+    public String estadoAtual;     //Em qual estado do automato esta
+    public String buffer;          //O buffer com o que foi consumido pelo automato
 
 
     //@param Tipo do lexema Ex: Identificador
@@ -66,7 +66,7 @@ abstract class Lexema {
       
     }
 
-    public abstract String automato(char x); 
+    public abstract boolean automato(char x); 
 
 
 

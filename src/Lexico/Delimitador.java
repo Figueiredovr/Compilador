@@ -16,7 +16,7 @@ public class Delimitador extends Lexema {
     }
 
     @Override
-    public String automato(char x) {
+    public boolean automato(char x) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
